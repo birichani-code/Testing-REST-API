@@ -1,4 +1,4 @@
-package com.birichaniCode.restapi;
+package com.birichani.code.restapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
