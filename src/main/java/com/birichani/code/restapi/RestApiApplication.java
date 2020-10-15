@@ -1,4 +1,4 @@
-package com.birichaniCode.restapi;
+package com.birichani.code.restapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
