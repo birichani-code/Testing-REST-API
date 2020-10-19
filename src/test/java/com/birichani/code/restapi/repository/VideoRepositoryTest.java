@@ -36,7 +36,7 @@ class VideoRepositoryTest {
         assertNotNull(videoRepository);
     
         for (int i = 0; i < 5; i++) {
-            videoRepository.save( new Video(faker.name().title(), faker.lorem().paragraph()) );
+            videoRepository.save( new Video(faker.name().title(), faker.lorem().paragraph(), link) );
         }
         
         assertEquals(5, videoRepository.count());
