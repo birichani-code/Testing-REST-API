@@ -30,7 +30,8 @@ class VideoRepositoryTest {
     
     @Autowired private VideoRepository videoRepository;
     private final Faker faker = new Faker(Locale.ENGLISH);
-    
+    private String link;
+
     @Test
     void testThatRecordsAreInserted() {
         assertNotNull(videoRepository);
