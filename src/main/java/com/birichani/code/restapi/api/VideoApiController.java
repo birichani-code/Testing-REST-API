@@ -26,7 +26,7 @@ public class VideoApiController {
 	public String video(@PathVariable String videoTopic) {
 		String message;
 		
-		switch (videoTopic) {
+		switch (videoTopic.toLowerCase()) {
 			case "python":
 				message = InfoMessage.PYTHON_RESPONSE_MESSAGE;
 				break;
