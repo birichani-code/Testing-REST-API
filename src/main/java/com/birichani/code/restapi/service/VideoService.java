@@ -44,7 +44,6 @@ public class VideoService {
         return message;
     }
     
-    // TODO: Correct me
     public List<Video> filterVideosByTopic(String topic) {
         List<Video> videoList = videoRepository.findAll();
         
@@ -53,5 +52,11 @@ public class VideoService {
                 .filter(video -> video.getTopic() != null)
                 .filter(video -> video.getTopic().equalsIgnoreCase(topic))
                 .collect(Collectors.toList());
+    }
+    
+    
+    // TODO: Implement me
+    public List<Video> filterVideosByTitle(String title) {
+        return Collections.emptyList();
     }
 }

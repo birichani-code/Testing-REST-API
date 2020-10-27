@@ -76,6 +76,14 @@ class VideoServiceTest {
         assertThat(filteredVideoList).containsExactlyInAnyOrder(saw, houseOfWax, exorcismOfEmilyRose);
     }
     
+    @Test
+    @DisplayName("Filter videos based on title attribute")
+    void shouldFilterVideosByTitle() {
+        // when
+        when(videoRepository.findAll()).thenReturn(videoList);
     
+        List<Video> videoList = videoService.filterVideosByTitle("the");
+        assertThat(videoList).contains(exorcismOfEmilyRose);
+    }
     
 }
