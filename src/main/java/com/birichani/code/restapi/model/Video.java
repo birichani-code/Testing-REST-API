@@ -1,5 +1,6 @@
 package com.birichani.code.restapi.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import javax.persistence.Id;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Video {
 	@Id
@@ -17,9 +19,11 @@ public class Video {
 	private Long vid;
 	private String title;
 	private String description;
+	private String topic;
 	
-	public Video(String title, String description) {
+	public Video(String title, String description, String topic) {
 		this.title = title;
 		this.description = description;
+		this.topic = topic;
 	}
 }
