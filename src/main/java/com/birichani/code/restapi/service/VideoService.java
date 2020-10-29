@@ -7,7 +7,6 @@ import com.birichani.code.restapi.repository.VideoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -57,6 +56,12 @@ public class VideoService {
     
     // TODO: Implement me
     public List<Video> filterVideosByTitle(String title) {
-        return Collections.emptyList();
+        List<Video> videoList = videoRepository.findAll();
+        
+        return videoList.stream()
+                .filter(Objects::nonNull)
+                .filter(video -> video.getTitle() != null)
+                .filter(video -> video.getTitle().toLowerCase().contains(title.toLowerCase()))
+                .collect(Collectors.toList());
     }
 }
